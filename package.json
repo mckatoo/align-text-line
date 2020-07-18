@@ -1,10 +1,13 @@
 {
-  "name": "utils",
+  "name": "align-text-line",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc --declaration",
+    "dev": "nodemon --watch \"src//\" --exec \"ts-node src/index.ts\" -e ts"
   },
   "keywords": [],
   "author": "",

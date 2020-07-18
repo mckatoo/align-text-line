@@ -1,79 +1,79 @@
-export function centralized(text: string, lineSize: number) {
-  const initText = lineSize / 2 - text.length / 2 - 1;
-  const endText = initText + text.length;
-  let cursorTextPosition = 0;
-  let alignedText = "";
+export function centralized(text: string, lineSize: number): string {
+  const initText = lineSize / 2 - text.length / 2 - 1
+  const endText = initText + text.length + 1
+  let cursorTextPosition = 0
+  let alignedText = ''
 
   for (let x = 0; x < lineSize; x++) {
     if (x > initText && x < endText) {
-      alignedText += text[cursorTextPosition];
-      cursorTextPosition++;
+      alignedText += text[cursorTextPosition]
+      cursorTextPosition++
     } else {
-      alignedText += "-";
+      alignedText += '-'
     }
   }
 
-  return alignedText;
+  return alignedText
 }
 
-export function rightAligned(text: string, lineSize: number) {
-  const initText = lineSize - text.length - 1;
-  const endText = initText + text.length + 1;
-  let cursorTextPosition = 0;
-  let alignedText = "";
+export function rightAligned(text: string, lineSize: number): string {
+  const initText = lineSize - text.length - 1
+  const endText = initText + text.length + 1
+  let cursorTextPosition = 0
+  let alignedText = ''
 
   for (let x = 0; x < lineSize; x++) {
     if (x > initText && x < endText) {
-      alignedText += text[cursorTextPosition];
-      cursorTextPosition++;
+      alignedText += text[cursorTextPosition]
+      cursorTextPosition++
     } else {
-      alignedText += "-";
+      alignedText += '-'
     }
   }
 
-  return alignedText;
+  return alignedText
 }
 
-export function leftAligned(text: string, lineSize: number) {
-  let cursorTextPosition = 0;
-  let alignedText = "";
+export function leftAligned(text: string, lineSize: number): string {
+  let cursorTextPosition = 0
+  let alignedText = ''
 
   for (let x = 0; x < lineSize; x++) {
     if (x >= 0 && x < text.length) {
-      alignedText += text[cursorTextPosition];
-      cursorTextPosition++;
+      alignedText += text[cursorTextPosition]
+      cursorTextPosition++
     } else {
-      alignedText += "-";
+      alignedText += '-'
     }
   }
 
-  return alignedText;
+  return alignedText
 }
 
 export function leftRightAligned(
   textLeft: string,
   textRight: string,
   lineSize: number
-) {
-  let cursorTextLeftPosition = 0;
-  const initTextRight = lineSize - textRight.length - 1;
-  const endTextRight = initTextRight + textRight.length + 1;
-  let cursorTextRightPosition = 0;
-  let alignedText = "";
+): string {
+  let cursorTextLeftPosition = 0
+  const initTextRight = lineSize - textRight.length - 1
+  const endTextRight = initTextRight + textRight.length + 1
+  let cursorTextRightPosition = 0
+  let alignedText = ''
 
-  if (lineSize < textRight.length + textLeft.length) return Error;
+  if (lineSize < textRight.length + textLeft.length) return Error.toString()
 
   for (let x = 0; x < lineSize; x++) {
     if (x >= 0 && x < textLeft.length) {
-      alignedText += textLeft[cursorTextLeftPosition];
-      cursorTextLeftPosition++;
+      alignedText += textLeft[cursorTextLeftPosition]
+      cursorTextLeftPosition++
     } else if (x > initTextRight && x < endTextRight) {
-      alignedText += textRight[cursorTextRightPosition];
-      cursorTextRightPosition++;
+      alignedText += textRight[cursorTextRightPosition]
+      cursorTextRightPosition++
     } else {
-      alignedText += "-";
+      alignedText += '-'
     }
   }
 
-  return alignedText;
+  return alignedText
 }
