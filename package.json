@@ -10,8 +10,12 @@
     "dev": "nodemon --watch \"src//\" --exec \"ts-node src/index.ts\" -e ts"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Milton Carlos Katoo <mckatoo@gmail.com>",
+  "repository": {
+    "url": "https://github.com/mckatoo/align-text-line.git",
+    "type": "github"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@babel/preset-typescript": "^7.10.4",
     "@commitlint/cli": "^9.1.1",
