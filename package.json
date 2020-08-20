@@ -1,7 +1,7 @@
 {
   "name": "align-text-line",
   "version": "0.0.6",
-  "description": "",
+  "description": "Typescript library for aligning texts on one line. Very useful for menus in bots and small fiscal printers.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -9,7 +9,11 @@
     "build": "tsc --declaration",
     "dev": "nodemon --watch \"src//\" --exec \"ts-node src/index.ts\" -e ts"
   },
-  "keywords": [],
+  "keywords": [
+    "typescript",
+    "align",
+    "text"
+  ],
   "author": "Milton Carlos Katoo <mckatoo@gmail.com>",
   "repository": {
     "url": "https://github.com/mckatoo/align-text-line.git",
